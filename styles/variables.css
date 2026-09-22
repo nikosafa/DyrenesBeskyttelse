@@ -1,14 +1,14 @@
 :root {
   /* Brand palette */
-  --color-primary: #1f6f5c;
-  --color-primary-dark: #14493d;
-  --color-primary-light: #e4f2ee;
-  --color-secondary: #f2994a;
-  --color-secondary-dark: #c97730;
-  --color-secondary-light: #fdeee0;
+  --color-primary: #ef4b3d;
+  --color-primary-dark: #c3181b;
+  --color-primary-light: #fbe2df;
+  --color-secondary: #c3181b;
+  --color-secondary-dark: #96110f;
+  --color-secondary-light: #fbe2df;
 
   /* Neutrals */
-  --color-bg: #faf9f6;
+  --color-bg: #f5f0e6;
   --color-surface: #ffffff;
   --color-text: #1e2422;
   --color-text-muted: #5b6663;
@@ -44,6 +44,6 @@
   --content-max-width: 760px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --shadow-sm: 0 1px 3px rgba(20, 73, 61, 0.08);
-  --shadow-md: 0 8px 24px rgba(20, 73, 61, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
