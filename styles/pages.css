@@ -14,6 +14,13 @@
   justify-content: center;
 }
 
+.hero-logo {
+  align-self: flex-start;
+  height: 40px;
+  width: auto;
+  margin-bottom: var(--space-5);
+}
+
 .hero-sub {
   font-size: 1.125rem;
   color: var(--color-text-muted);
@@ -281,49 +288,27 @@
 }
 
 .logo-chip {
-  flex: 1 1 160px;
-  padding: var(--space-3);
+  flex: 1 1 200px;
+  padding: var(--space-4);
   border-radius: var(--radius-md);
-  text-align: center;
-  font-weight: 600;
-  font-size: var(--fs-small);
-}
-
-.logo-chip span {
-  display: block;
-  font-weight: 400;
-  color: var(--color-text-muted);
-  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-chip img {
-  width: 32px;
-  height: 32px;
-  margin: 0 auto var(--space-2);
+  max-width: 100%;
+  height: 48px;
+  width: auto;
 }
 
-.logo-chip-dark img {
-  filter: brightness(0) invert(1);
+.logo-chip-lockup {
+  height: 32px;
 }
 
 .logo-chip-light {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  color: var(--color-primary-dark);
-}
-
-.logo-chip-dark {
-  background: var(--color-primary-dark);
-  color: #fff;
-}
-
-.logo-chip-dark span {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.logo-chip-mono {
-  background: var(--color-primary-light);
-  color: var(--color-primary-dark);
 }
 
 /* Callouts */
