@@ -1,7 +1,7 @@
 .page-section {
   max-width: var(--content-max-width);
-  margin: 0 auto;
-  padding: var(--space-7) var(--space-4);
+  margin: 0;
+  padding: var(--space-7) var(--space-6);
   scroll-margin-top: 24px;
 }
 
@@ -48,7 +48,7 @@
   min-height: 60vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .divider-title {
@@ -56,12 +56,16 @@
 }
 
 .divider-subtitle {
-  margin: 0;
+  margin: 0 0 var(--space-4);
   font-size: var(--fs-body);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.01em;
   color: var(--color-text);
+}
+
+.divider-page p {
+  max-width: 720px;
 }
 
 /* Byline / eyebrow already in base.css */
