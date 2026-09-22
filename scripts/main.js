@@ -1,4 +1,5 @@
 import { loadPages } from "./pageLoader.js";
+import { buildNav, initScrollSpy } from "./sidebar.js";
 
 async function loadSidebarShell() {
   const res = await fetch("components/sidebar.html");
@@ -8,6 +9,8 @@ async function loadSidebarShell() {
 
 async function init() {
   await Promise.all([loadSidebarShell(), loadPages()]);
+  buildNav();
+  initScrollSpy();
 }
 
 init();
