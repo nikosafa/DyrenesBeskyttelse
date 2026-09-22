@@ -19,8 +19,9 @@
 }
 
 .sidebar-brand-mark {
-  font-size: 1.75rem;
-  line-height: 1;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 .sidebar-brand-name {
