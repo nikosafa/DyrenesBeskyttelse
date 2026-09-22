@@ -11,6 +11,16 @@ async function init() {
   await Promise.all([loadSidebarShell(), loadPages()]);
   buildNav();
   initScrollSpy();
+
+  // Loaded dynamically so a blocked/offline CDN only disables animation,
+  // it never breaks page loading or navigation.
+  try {
+    const { initSectionReveals, initNavIndicator } = await import("./animations.js");
+    initSectionReveals();
+    initNavIndicator();
+  } catch (err) {
+    console.warn("Motion.js animations unavailable:", err);
+  }
 }
 
 init();
