@@ -88,11 +88,6 @@
   font-size: var(--fs-small);
 }
 
-.platform-instagram { border-top-color: var(--color-instagram); }
-.platform-facebook { border-top-color: var(--color-facebook); }
-.platform-linkedin { border-top-color: var(--color-linkedin); }
-.platform-tiktok { border-top-color: var(--color-tiktok); }
-
 /* Tags */
 .tag {
   display: inline-block;
@@ -101,12 +96,8 @@
   font-size: var(--fs-small);
   font-weight: 600;
   color: #fff;
+  background: var(--color-secondary);
 }
-
-.tag-instagram { background: var(--color-instagram); }
-.tag-facebook { background: var(--color-facebook); }
-.tag-linkedin { background: var(--color-linkedin); }
-.tag-tiktok { background: var(--color-tiktok); }
 
 /* Content-fit rows */
 .content-fit-grid {
@@ -179,6 +170,7 @@
   padding: 2px 10px;
   border-radius: 999px;
   color: #fff;
+  background: var(--color-secondary);
   font-size: var(--fs-small);
   font-weight: 600;
   margin-bottom: var(--space-2);
