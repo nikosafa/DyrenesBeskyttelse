@@ -70,12 +70,6 @@ img {
   margin-bottom: var(--space-2);
 }
 
-.byline {
-  font-size: var(--fs-small);
-  color: var(--color-text-muted);
-  font-style: italic;
-}
-
 @media (max-width: 900px) {
   #app {
     flex-direction: column;
