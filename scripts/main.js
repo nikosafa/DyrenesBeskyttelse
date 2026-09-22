@@ -4,7 +4,10 @@ import { buildNav, initScrollSpy } from "./sidebar.js";
 async function loadSidebarShell() {
   const res = await fetch("components/sidebar.html");
   const html = await res.text();
-  document.getElementById("sidebar-mount").innerHTML = html;
+  // Replace the mount point itself (not just its innerHTML) so <aside id="sidebar">
+  // becomes a direct child of the #app flex container — position: sticky only has
+  // room to work when the sticky element's own parent is the scrollable flex item.
+  document.getElementById("sidebar-mount").outerHTML = html;
 }
 
 async function init() {
