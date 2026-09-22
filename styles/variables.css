@@ -6,11 +6,12 @@
   --color-secondary: #c3181b;
   --color-secondary-dark: #96110f;
   --color-secondary-light: #fbe2df;
+  --color-black: #000000;
 
   /* Neutrals */
   --color-bg: #f5f0e6;
   --color-surface: #ffffff;
-  --color-text: #1e2422;
+  --color-text: var(--color-black);
   --color-text-muted: #5b6663;
   --color-border: #e2e8e5;
 
