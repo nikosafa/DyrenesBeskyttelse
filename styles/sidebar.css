@@ -98,18 +98,6 @@
   background: var(--color-secondary);
 }
 
-.sidebar-back-to-top {
-  display: block;
-  margin-top: var(--space-3);
-  font-size: var(--fs-small);
-  color: var(--color-text-muted);
-  text-decoration: none;
-}
-
-.sidebar-back-to-top:hover {
-  color: var(--color-primary);
-}
-
 @media (max-width: 900px) {
   .sidebar {
     width: 100%;
@@ -150,9 +138,5 @@
     bottom: -2px;
     width: auto;
     height: 3px;
-  }
-
-  .sidebar-back-to-top {
-    display: none;
   }
 }
