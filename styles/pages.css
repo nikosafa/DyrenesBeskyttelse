@@ -400,6 +400,10 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.example-row-3 {
+  grid-template-columns: repeat(3, minmax(0, 240px));
+}
+
 /* Platform guideline pages: right/wrong logo examples */
 .logo-example-row {
   display: grid;
