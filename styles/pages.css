@@ -331,6 +331,50 @@
   inset: 10%;
 }
 
+/* Instagram: 250px top / 310px bottom on 1920px, 5% margin on 4:5 feed posts */
+.safe-zone-row-even {
+  grid-template-columns: repeat(4, minmax(0, 200px));
+  grid-template-rows: auto auto;
+  align-items: start;
+  row-gap: var(--space-2);
+}
+
+/* subgrid keeps all boxes top-aligned even when a longer label wraps */
+.safe-zone-row-even .safe-zone-item {
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  margin-bottom: var(--space-3);
+}
+
+.safe-zone-row-even .safe-zone-label {
+  margin: 0;
+}
+
+.safe-zone-row-even .safe-zone {
+  align-self: start;
+}
+
+.safe-zone-square {
+  aspect-ratio: 1 / 1;
+}
+
+.safe-zone-square .safe-zone-inner {
+  inset: 5%;
+}
+
+.safe-zone-tall-ig .safe-zone-inner {
+  inset: 13% 0 16.1%;
+}
+
+.safe-zone-portrait {
+  aspect-ratio: 1080 / 1350;
+}
+
+.safe-zone-portrait .safe-zone-inner {
+  inset: 5%;
+}
+
 .two-col-tight {
   grid-template-columns: 1fr 1fr;
   gap: var(--space-5);
@@ -350,6 +394,10 @@
 .example-row img {
   width: 100%;
   height: auto;
+}
+
+.example-row-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 /* Platform guideline pages: right/wrong logo examples */
@@ -730,6 +778,7 @@
 }
 
 .mockup-avatar {
+  display: block;
   width: 32px;
   height: 32px;
   border-radius: 50%;
