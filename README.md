@@ -14,7 +14,7 @@ styles/
   sidebar.css            sticky sidebar, nav link states, active indicator, mobile collapse
   pages.css               shared section/page styling (cards, tables, mockups, dividers)
 scripts/
-  config.js            single source of truth: ordered list of all 27 sections
+  config.js            single source of truth: ordered list of all 23 sections
                         { id, file, navLabel, group, isDivider }
   pageLoader.js         fetches every pages/*.html (in parallel) and injects them
                         into #content, in config order
@@ -28,16 +28,16 @@ scripts/
 components/
   sidebar.html          static sidebar shell (brand mark + <nav> container);
                         nav links themselves are generated from config.js
-pages/                 one file per section, 27 files total. Each file is a
+pages/                 one file per section, 23 files total. Each file is a
                         ready-to-inject <section id="…" class="page-section">,
-                        including the 13 divider "pages" between chapters
+                        including the 11 divider "pages" between chapters
 assets/images/         logo (full lockup + icon mark), platform icon SVGs
 ```
 
-**How it fits together:** `main.js` fetches the sidebar shell and all 27 page
+**How it fits together:** `main.js` fetches the sidebar shell and all 23 page
 partials in parallel, injects them in the order `config.js` defines, then
 builds the sidebar nav from that same config (dividers are excluded — only
-the 14 real content sections get a nav entry). A single `IntersectionObserver`
+the 12 real content sections get a nav entry). A single `IntersectionObserver`
 tracks which section is centred in the viewport and toggles the active nav
 link. Motion.js (loaded from a CDN as an ES module, not via npm) adds a
 scroll-linked fade/slide reveal per section and an animated pill behind the

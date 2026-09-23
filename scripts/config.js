@@ -19,11 +19,7 @@ export const pages = [
   { id: "divider-9", file: "18-divider.html", isDivider: true },
   { id: "tiktok", file: "19-tiktok-guidelines.html", navLabel: "09 TikTok", group: "Platform Guidelines" },
   { id: "divider-10", file: "20-divider.html", isDivider: true },
-  { id: "catalogue", file: "21-catalogue-guidelines.html", navLabel: "10 Tone of Voice", group: "Process" },
+  { id: "content-calendar", file: "21-content-calendar.html", navLabel: "10 Planlægning", group: "Process" },
   { id: "divider-11", file: "22-divider.html", isDivider: true },
-  { id: "content-calendar", file: "23-content-calendar.html", navLabel: "11 Planlægning", group: "Process" },
-  { id: "divider-12", file: "24-divider.html", isDivider: true },
-  { id: "kpi", file: "25-kpi.html", navLabel: "12 Måling af Succes", group: "Process" },
-  { id: "divider-13", file: "26-divider.html", isDivider: true },
-  { id: "summary", file: "27-summary.html", navLabel: "13 Afrunding", group: "Closing" },
+  { id: "summary", file: "23-summary.html", navLabel: "11 Resume", group: "Closing" },
 ];
