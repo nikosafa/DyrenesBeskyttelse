@@ -15,6 +15,10 @@
   --color-text-muted: #5b6663;
   --color-border: #e2e8e5;
 
+  /* Phone body around example videos */
+  --color-phone-body: #111111;
+  --color-phone-edge: #4d4d4d;
+
   /* Right/wrong example frames (logo usage) */
   --color-example-wrong: #edc8c1;
   --color-example-right: #cbe6c1;
