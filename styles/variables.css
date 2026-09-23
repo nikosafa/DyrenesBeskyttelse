@@ -43,8 +43,8 @@
   /* Layout */
   --sidebar-width: 280px;
   --content-max-width: 760px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-md: 0;
+  --radius-lg: 0;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
