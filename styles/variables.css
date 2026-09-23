@@ -15,6 +15,10 @@
   --color-text-muted: #5b6663;
   --color-border: #e2e8e5;
 
+  /* Right/wrong example frames (logo usage) */
+  --color-example-wrong: #edc8c1;
+  --color-example-right: #cbe6c1;
+
   /* Platform accents (used only as small tags, not full theming) */
   --color-instagram: #d6336c;
   --color-facebook: #1657c9;
