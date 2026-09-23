@@ -1,7 +1,9 @@
 export const pages = [
   { id: "heading", file: "01-heading.html", navLabel: "Forside", group: "Getting Started" },
-  { id: "divider-1", file: "02-divider.html", navLabel: "01 Indledning", group: "Getting Started" },
-  { id: "divider-2", file: "04-divider.html", navLabel: "02 Oversigt", group: "Getting Started" },
+  { id: "divider-1", file: "02-divider.html", isDivider: true },
+  { id: "introduction", file: "03-introduction.html", navLabel: "01 Indledning", group: "Getting Started" },
+  { id: "divider-2", file: "04-divider.html", isDivider: true },
+  { id: "overview", file: "05-overview.html", navLabel: "02 Oversigt", group: "Getting Started" },
   { id: "divider-3", file: "06-divider.html", isDivider: true },
   { id: "content-where", file: "07-content-where.html", navLabel: "03 Content til Platform", group: "Getting Started" },
   { id: "divider-4", file: "08-divider.html", isDivider: true },
