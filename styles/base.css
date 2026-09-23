@@ -20,15 +20,21 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-heading);
-  font-weight: 600;
-  line-height: 1.15;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
   margin: 0 0 var(--space-3);
-  color: var(--color-primary-dark);
+  color: var(--color-secondary);
 }
 
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
+
+h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-text);
+}
 
 p {
   margin: 0 0 var(--space-3);
@@ -63,10 +69,10 @@ img {
 .eyebrow {
   display: inline-block;
   font-size: var(--fs-small);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-secondary-dark);
+  color: var(--color-primary);
   margin-bottom: var(--space-2);
 }
 
