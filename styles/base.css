@@ -18,7 +18,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-heading);
   font-weight: 800;
   text-transform: uppercase;
@@ -28,20 +30,30 @@ h1, h2, h3 {
   color: var(--color-secondary);
 }
 
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
 
 h3 {
   font-size: var(--fs-h3);
   color: var(--color-text);
 }
 
+.font-display {
+  font-size: var(--fs-h1);
+}
+
 p {
   margin: 0 0 var(--space-3);
   color: var(--color-text);
+  text-align: justify;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 var(--space-3);
   padding-left: 1.25em;
 }
