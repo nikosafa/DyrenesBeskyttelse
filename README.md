@@ -2,17 +2,34 @@
 
 ## SoMe Guide
 
-A single-scroll social media brand & style guide, built as a static multi-page site with a sticky left-hand nav that tracks scroll position. Plain HTML/CSS/JS — no build step, no npm dependency in the shipped site — so it can be hosted directly on GitHub Pages.
+A single-scroll social media brand & style guide for Dyrenes Beskyttelse,
+Roskilde Internat (in Danish), built as a static multi-page site with a
+sticky left-hand nav that tracks scroll position. Plain HTML/CSS/JS — no
+build step, no npm dependency in the shipped site — so it can be hosted
+directly on GitHub Pages.
+
+Visual language: Karla (uppercase headings, no separate display face),
+the brand red/cream palette, and fully square corners — `--radius-md` and
+`--radius-lg` in `styles/variables.css` are both `0`, matching the flat,
+sharp-edged look of dyrenesbeskyttelse.dk. Don't reintroduce rounded
+corners on cards/tags/buttons without being asked; circular elements
+(avatar dots, the donut chart) are the one intentional exception.
 
 ### Architecture
 
 ```
 index.html            shell: sidebar mount point + #content mount point + module script tag
 styles/
-  variables.css        brand colours, type scale, spacing (CSS custom properties)
+  variables.css        brand colours, type scale, spacing, radii (all 0 — see above)
   base.css              reset, base typography, #app flex layout
-  sidebar.css            sticky sidebar, nav link states, active indicator, mobile collapse
-  pages.css               shared section/page styling (cards, tables, mockups, dividers)
+  sidebar.css            sticky sidebar, nav link states, active indicator;
+                        on mobile the nav becomes a horizontally-scrollable
+                        single row instead of a vertical list (no hamburger —
+                        keep it that way unless asked)
+  pages.css               shared section/page styling: cards, tables, mockups,
+                        dividers, plus the two-col layout, dummy chart
+                        components (donut/bar charts, chart-card) and the
+                        avoid-list (pink row + ✕) used on page 3
 scripts/
   config.js            single source of truth: ordered list of all 27 sections
                         { id, file, navLabel, group, isDivider }
@@ -28,10 +45,20 @@ scripts/
 components/
   sidebar.html          static sidebar shell (brand mark + <nav> container);
                         nav links themselves are generated from config.js
-pages/                 one file per section, 27 files total. Each file is a
-                        ready-to-inject <section id="…" class="page-section">,
-                        including the 13 divider "pages" between chapters
-assets/images/         logo (full lockup + icon mark), platform icon SVGs
+pages/                 one file per section, 27 files total, numbered
+                        sequentially (01–27). Each file is a ready-to-inject
+                        <section id="…" class="page-section">, including the
+                        13 divider "pages" between chapters. Chapters 1–2 are
+                        split divider+content pairs (02/03, 04/05), same
+                        pattern as every later chapter — keep new chapters
+                        numbered that way, and update config.js to match
+                        whenever you add, remove or renumber a file
+assets/images/         logo-full.png (lockup), logo-mark.png (icon, used as
+                        favicon + sidebar mark), logo-a-full.png (hero logo).
+                        Known gap: the Facebook/Instagram/LinkedIn platform
+                        mockups reference assets/images/icon-*.svg files that
+                        no longer exist in this folder (404 in the console) —
+                        restore those SVGs or point the mockups at new ones
 ```
 
 **How it fits together:** `main.js` fetches the sidebar shell and all 27 page
@@ -74,32 +101,48 @@ up this project cold:
 
 ```
 You're working on a static, no-build-step multi-page website ("SoMe Guide")
-for Dyrenes Beskyttelse. It's plain HTML/CSS/JS — no npm dependency ships in
-the site itself — deployed as-is to GitHub Pages, so never introduce a
-bundler, framework, or npm package that the shipped index.html would need
-at runtime.
+for Dyrenes Beskyttelse, Roskilde Internat. Content is in Danish. It's plain
+HTML/CSS/JS — no npm dependency ships in the site itself — deployed as-is to
+GitHub Pages, so never introduce a bundler, framework, or npm package that
+the shipped index.html would need at runtime.
 
 Architecture:
-- Each content section lives in its own file in /pages, as a ready-to-inject
-  <section id="…" class="page-section">. /scripts/config.js is the single
-  source of truth listing every section (id, file, navLabel, group,
-  isDivider) — pageLoader.js and sidebar.js both read from it. To add a
-  page: create the file in /pages, then add one entry to config.js.
-- Colours, type scale and spacing are CSS custom properties in
-  styles/variables.css — never hardcode a hex colour in a page or in
-  pages.css; add or reuse a variable instead.
+- Each content section lives in its own file in /pages, numbered
+  sequentially (01-heading.html, 02-divider.html, 03-introduction.html, …),
+  as a ready-to-inject <section id="…" class="page-section">.
+  /scripts/config.js is the single source of truth listing every section
+  (id, file, navLabel, group, isDivider) — pageLoader.js and sidebar.js both
+  read from it. To add a page: create the file in /pages with the next
+  sequential number, then add one entry to config.js. Every chapter after
+  the hero is a divider+content pair (e.g. 02-divider.html +
+  03-introduction.html) — keep that pattern, don't merge a divider's
+  title/subtitle into the content page itself.
+- Colours, type scale, spacing and border radius are CSS custom properties
+  in styles/variables.css — never hardcode a hex colour in a page or in
+  pages.css; add or reuse a variable instead. `--radius-md` and
+  `--radius-lg` are intentionally `0` (flat, square design matching
+  dyrenesbeskyttelse.dk) — don't add rounded corners to cards/tags/buttons
+  without being asked; circles (avatars, the donut chart) are the exception.
 - The sidebar nav, scroll-based active-section highlighting, and Motion.js
   scroll animations are already built (scripts/sidebar.js,
-  scripts/animations.js). Motion.js is loaded from a CDN as an ES module
-  and imported dynamically so the site still works if that CDN is blocked
-  — keep that fallback intact if you touch animations.js.
-- Brand assets (logo, platform icons) are in assets/images/. The real
-  Dyrenes Beskyttelse logo is logo-full.png (lockup) and logo-mark.png
-  (icon only, used for the favicon and small spaces).
+  scripts/animations.js). On mobile the nav is a horizontally-scrollable
+  single row, not a hamburger menu — keep it that way unless asked
+  otherwise. Motion.js is loaded from a CDN as an ES module and imported
+  dynamically so the site still works if that CDN is blocked — keep that
+  fallback intact if you touch animations.js.
+- Brand assets are in assets/images/: logo-full.png (lockup), logo-mark.png
+  (icon, used for the favicon, sidebar mark and small spaces), and
+  logo-a-full.png (hero logo). The Facebook/Instagram/LinkedIn mockups on
+  the platform guideline pages still reference assets/images/icon-*.svg
+  files that don't exist in this folder — that's a known broken image, not
+  something to silently "fix" by inventing new icons; ask first or flag it.
 
 Before treating any UI change as done, actually serve the site (`npx serve .`
 or similar — file:// won't work because of fetch()) and check it in a
-browser, including scrolling behaviour and the active nav highlight.
+browser at both a phone width (~375px) and desktop — this guide has broken
+its mobile layout more than once from things that looked fine on desktop
+(e.g. a table cell with one long unbreakable Danish compound word forcing
+horizontal overflow), so don't skip the phone-width check.
 ```
 
 ## Gitflow Flow
