@@ -107,6 +107,11 @@
   flex-shrink: 0;
 }
 
+.account-icon-facebook { background: var(--color-facebook); }
+.account-icon-instagram { background: var(--color-instagram); }
+.account-icon-linkedin { background: var(--color-linkedin); }
+.account-icon-tiktok { background: var(--color-tiktok); }
+
 .account-list span {
   font-weight: 700;
   font-size: var(--fs-small);
