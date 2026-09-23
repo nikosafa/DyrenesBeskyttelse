@@ -7,7 +7,7 @@ export const pages = [
   { id: "divider-3", file: "06-divider.html", isDivider: true },
   { id: "content-where", file: "07-content-where.html", navLabel: "03 Content til Platform", group: "Getting Started" },
   { id: "divider-4", file: "08-divider.html", isDivider: true },
-  { id: "audiences", file: "09-audiences.html", navLabel: "04 Målgrupper", group: "Getting Started" },
+  { id: "audiences", file: "09-audiences.html", navLabel: "04 Publikum", group: "Getting Started" },
   { id: "divider-5", file: "10-divider.html", isDivider: true },
   { id: "styleguide", file: "11-styleguide.html", navLabel: "05 Visuel Identitet", group: "Brand" },
   { id: "divider-6", file: "12-divider.html", isDivider: true },
