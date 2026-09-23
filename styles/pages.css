@@ -453,6 +453,23 @@
   grid-template-columns: repeat(3, minmax(0, 240px));
 }
 
+/* Red idea box (Instagram: idéer til interaktion) */
+.idea-box {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-secondary);
+  color: var(--color-surface);
+}
+
+.idea-box h3 {
+  margin-bottom: var(--space-3);
+  color: var(--color-surface);
+}
+
+.idea-box ul {
+  margin: 0;
+}
+
 /* Platform guideline pages: right/wrong logo examples */
 .logo-example-row {
   display: grid;
@@ -723,7 +740,7 @@
   margin: 0;
 }
 
-.plan-week {
+.plan-tag {
   padding: 2px var(--space-3);
   background: var(--color-primary);
   color: var(--color-surface);
