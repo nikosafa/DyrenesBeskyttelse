@@ -287,6 +287,97 @@
   white-space: nowrap;
 }
 
+/* Platform guideline pages: safe-zone diagrams */
+.safe-zone-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2.15fr;
+  gap: var(--space-4);
+  align-items: end;
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.safe-zone-item {
+  margin: 0;
+}
+
+.safe-zone-label {
+  margin: 0 0 var(--space-2);
+  font-size: var(--fs-small);
+}
+
+.safe-zone {
+  position: relative;
+  background: var(--color-secondary);
+}
+
+.safe-zone-inner {
+  position: absolute;
+  background: var(--color-surface);
+}
+
+.safe-zone-tall {
+  aspect-ratio: 1080 / 1920;
+}
+
+.safe-zone-tall .safe-zone-inner {
+  inset: 13% 0;
+}
+
+.safe-zone-post {
+  aspect-ratio: 1200 / 630;
+}
+
+.safe-zone-post .safe-zone-inner {
+  inset: 10%;
+}
+
+.two-col-tight {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+/* Platform guideline pages: horizontal row of example post screenshots */
+.example-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--space-3);
+  margin: var(--space-4) 0;
+}
+
+.example-row img {
+  width: 100%;
+  height: auto;
+}
+
+/* Platform guideline pages: right/wrong logo examples */
+.logo-example-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  margin: var(--space-4) 0 var(--space-5);
+}
+
+.logo-example {
+  margin: 0;
+  padding: var(--space-5) var(--space-2) var(--space-2);
+}
+
+.logo-example-wrong {
+  background: var(--color-example-wrong);
+}
+
+.logo-example-right {
+  background: var(--color-example-right);
+}
+
+.logo-example img {
+  width: 100%;
+  height: auto;
+}
+
 /* Publikum (audience) page */
 .page-section-wide {
   max-width: 1100px;
@@ -342,6 +433,22 @@
 
   .audience-cols {
     grid-template-columns: 1fr;
+  }
+
+  .safe-zone-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .safe-zone-item-wide {
+    grid-column: 1 / -1;
+  }
+
+  .logo-example-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .example-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
