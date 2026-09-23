@@ -21,5 +21,5 @@ export const pages = [
   { id: "divider-10", file: "20-divider.html", isDivider: true },
   { id: "content-calendar", file: "21-content-calendar.html", navLabel: "10 Planlægning", group: "Process" },
   { id: "divider-11", file: "22-divider.html", isDivider: true },
-  { id: "summary", file: "23-summary.html", navLabel: "11 Resume", group: "Closing" },
+  { id: "summary", file: "23-summary.html", navLabel: "11 Afslutning", group: "Closing" },
 ];
